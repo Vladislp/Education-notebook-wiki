@@ -15,24 +15,71 @@
 <div class="row">
   <div class="leftcolumn">
     <div class="card">
-      <h2>TITLE HEADING</h2>
-      <h5>Title description, Dec 7, 2017</h5>
+      <h2>DOM Events</h2>
+      <h5>Some examples of DOM events, 22.11.2022</h5>
       <div class="fakeimg" style="height:200px;">Image</div>
-      <p>
+      <p>Event reference: https://developer.mozilla.org/en-US/docs/Web/Events</p>
 
-		Here is all you need to know about relative file paths:
-		<hr>
-    	Starting with "/" returns to the root directory and starts there
-    	<hr>
-    	Starting with "../" moves one directory backwards and starts there
-    	<hr>
-    	Starting with "../../" moves two directories backwards and starts there (and so on...)
-    	<hr>
-    	To move forward, just start with the first subdirectory and keep moving forward
-    	<hr>
-
-	  </p>
     </div>
+    <div class="card">
+      <h2>DOM</h2>
+      <h5>DOM Selectors, 22.11.2022</h5>
+      <img src="https://www.csssolid.com/images/css-structural-pseudo-class-parent-child.png">
+      <p>var h1 = document.querySelector("h1");</p>
+      <p>h1</p>
+      <p>h1.className = "coolTitle"</p>
+      <br>
+      <p>querySelect are better to use, then other. We take querySelector-s to grab the element and change the styles using something like "classList"</p>
+      <br>
+      <p>If we want to choose first element in (li), that we can use: "document.querySelector("li").classList.toggle("done);</p>
+      <br>
+      <p>"document.querySelectorAll("li")[1];" we will get the first element of "li". We can get the parrent element of ("li")...we should get ("ul"). We can find parent of parent. Same concept if with we deal with children</p>
+      <br>
+      <strong>It is important to CACHE selectors in variables</strong>
+      <p> "var h1 = document.querySelector("h1");" for example</p>
+      <br>
+      <table>
+      <tr>
+        <th>DOM Selectors</th>
+      </tr>
+      <tr>
+        <td>getElementsByTagName</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>getElementsByClassName</td>
+      </tr>
+
+      <tr>
+        <td>getElementById</td>
+      </tr>
+
+      <tr>
+        <td>querySelector</td>
+      </tr>
+      <tr>
+        <td>querySelectorAll</td>
+      </tr>
+      <tr>
+        <td>getAttribute</td>
+      </tr>
+      <tr>
+        <td>setAttribute</td>
+      </tr>
+      <tr>
+        <td>style.{property}</td>
+      </tr>
+      <tr>
+        <td>className</td>
+      </tr>
+      <tr>
+        <td>classList</td>
+      </tr>
+
+      </table>
+    </div>
+
     <div class="card">
       <h2>TITLE HEADING</h2>
       <h5>Title description, Sep 2, 2017</h5>

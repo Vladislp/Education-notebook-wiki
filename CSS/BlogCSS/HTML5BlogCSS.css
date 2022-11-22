@@ -1,18 +1,20 @@
 * {
-  box-sizing: content-box;
+  box-sizing: border-box;
 }
+img {
+  border-radius: 8px;
+  max-width: 100%;
+  height: auto;
+  width: auto;
+}
+
 
 body {
-  margin: 0px;
-  background: url(https://burst.shopifycdn.com/photos/winding-tree-towers-over-landscape.jpg?width=1200&format=pjpg&exif=1&iptc=1) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  font-family: Arial;
+  padding: 20px;
+  background: #f1f1f1;
+  background-image: url(https://demos.creative-tim.com/material-kit-bs4/assets/img/bg2.jpg);
 }
-
-
-h1 { font-family: 'Enriqueta', arial, serif; line-height: 1.25; margin: 0 0 10px; font-size: 40px; font-weight: bold; }
 
 /* Header/Blog Title */
 .header {
@@ -72,4 +74,3 @@ h1 { font-family: 'Enriqueta', arial, serif; line-height: 1.25; margin: 0 0 10px
     padding: 0;
   }
 }
-
