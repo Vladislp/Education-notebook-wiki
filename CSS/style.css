@@ -1,10 +1,7 @@
 body {
 	margin: 0px;
-	background: url(https://webneel.com/wallpaper/sites/default/files/images/09-2015/1-mountain-digital-art-wallpaper-feliks.jpg) no-repeat center center fixed;
-	-webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+	background: rgb(2,0,36);
+	background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,78,9,1) 29%, rgba(0,212,255,1) 100%); 
 }
 
 .container {
