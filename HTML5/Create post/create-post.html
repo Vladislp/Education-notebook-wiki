@@ -15,15 +15,6 @@
         <link rel="stylesheet" type="text/css" href="../CSS/BlogCSS/BlogStyle.css">
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-
-        <script>
-            const form = document.querySelector('#create-post-form');
-            const submitBtn = document.querySelector('#submit-btn');
-            submitBtn.addEventListener('click', function(event) {
-            event.preventDefault(); // prevent form from submitting normally
-          // call function to create new section here
-          });
-        </script>
     </head>
     <body>
       <form id="create-post-form" action="HTML5.html" method="POST" enctype="multipart/form-data">
@@ -36,40 +27,33 @@
         <label for="content">Content:</label>
         <textarea id="content" name="content"></textarea>
         <br>
-        <button type="submit" id="submit-btn">Submit</button>
+        <button type="submit">Save Data</button>
       </form>
-      <!-- add the script tag here -->
+      
       <script>
-        const form = document.querySelector('#my-form');
-        const submitBtn = document.querySelector('#submit-btn');
-        submitBtn.addEventListener('click', function(event) {
+        // Get the form element
+        const myForm = document.getElementById("create-post-form");
+      
+        // Add an event listener to the form's submit button
+        myForm.addEventListener("submit", function(event) {
+          // Prevent the default form submission behavior
           event.preventDefault();
-          createNewSection();
+      
+          // Get the form data as an object
+          const formData = new FormData(myForm);
+          const dataObject = {};
+          for (const [key, value] of formData.entries()) {
+            dataObject[key] = value;
+          }
+      
+          // Save the form data to localStorage
+          localStorage.setItem("my-form-data", JSON.stringify(dataObject));
+      
+          // Display a success message to the user
+          alert("Form data saved successfully!");
         });
-
-        function createNewSection() {
-          const postContainer = document.querySelector('#post-container');
-
-          // create new section element
-          const newSection = document.createElement('div');
-          newSection.classList.add('post-preview');
-
-          // add HTML to section element
-          newSection.innerHTML = `
-            <a href="post.html">
-              <h2 class="post-title">New Post Title</h2>
-              <h3 class="post-subtitle">New Post Subtitle</h3>
-            </a>
-            <p class="post-meta">
-              Posted by
-              <a href="#!">New Author</a>
-              on ${new Date().toLocaleDateString()}
-            </p>
-          `;
-
-          // append new section to post container
-          postContainer.appendChild(newSection);
-        }
       </script>
+      
+      </form>
     </body>
 </html> 
