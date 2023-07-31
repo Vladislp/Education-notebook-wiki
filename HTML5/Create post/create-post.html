@@ -17,7 +17,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     </head>
     <body>
-      <form id="create-post-form" action="HTML5.html" method="POST" enctype="multipart/form-data">
+      <form id="create-post-form" action="process-form.php" method="POST" enctype="multipart/form-data">
         <label for="title">Title:</label>
         <input type="text" id="title" name="title">
         <br>
@@ -27,33 +27,7 @@
         <label for="content">Content:</label>
         <textarea id="content" name="content"></textarea>
         <br>
-        <button type="submit">Save Data</button>
-      </form>
-      
-      <script>
-        // Get the form element
-        const myForm = document.getElementById("create-post-form");
-      
-        // Add an event listener to the form's submit button
-        myForm.addEventListener("submit", function(event) {
-          // Prevent the default form submission behavior
-          event.preventDefault();
-      
-          // Get the form data as an object
-          const formData = new FormData(myForm);
-          const dataObject = {};
-          for (const [key, value] of formData.entries()) {
-            dataObject[key] = value;
-          }
-      
-          // Save the form data to localStorage
-          localStorage.setItem("my-form-data", JSON.stringify(dataObject));
-      
-          // Display a success message to the user
-          alert("Form data saved successfully!");
-        });
-      </script>
-      
+        <button type="submit" href="../../HTML5/Wiki pages/HTML5.html">Save Data</button>  
       </form>
     </body>
 </html> 
